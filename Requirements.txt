@@ -1,0 +1,7 @@
+- See UML present in src/main/resources
+- Each Transacttion object is associated with a Bank
+- Each Account has an account holder , account number, and pin and balance
+- AccountHolder class is abstract and is implemented by Person and Company
+- Account class is abstract and is implemented by CommercialAccount and ConsumerAccount
+- A consumer account has a single person as owner but a commericial account has a company as its owners
+  and maintains a list of Person objects as Authorized users on the Account
