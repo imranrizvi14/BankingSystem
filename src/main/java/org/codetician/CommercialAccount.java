@@ -1,22 +1,26 @@
 package org.codetician;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class CommercialAccount implements AccountInterface {
+public class CommercialAccount extends Account {
 
-  private List<Person> authorizedUsers;
+  private final List<Person> authorizedUsers;
 
-  public CommercialAccount(Company company, Long accountNumber, int pin, double balance) {
-    // Complete the constructor
+  public CommercialAccount(Company company,
+                           Long accountNumber,
+                           int pin,
+                           double balance) {
+    super(company, accountNumber, pin, balance);
+    this.authorizedUsers = new ArrayList<>();
   }
 
   protected void addAuthorizedUser(Person person) {
-    // complete the function
+    authorizedUsers.add(person);
   }
 
   public boolean isAuthorizedUser(Person person) {
-    // complete the function
-    return true;
+    return authorizedUsers.contains(person);
   }
 
 }

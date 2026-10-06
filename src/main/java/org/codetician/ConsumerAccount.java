@@ -1,9 +1,9 @@
 package org.codetician;
 
-public class ConsumerAccount {
+public class ConsumerAccount extends Account {
 
   public ConsumerAccount(Person person, Long accountNumber, int pin, double balance) {
-    // complete this constructor
+    super(person, accountNumber, pin, balance);
   }
 
 }

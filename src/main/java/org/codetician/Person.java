@@ -1,20 +1,20 @@
 package org.codetician;
 
-public class Person {
+public class Person extends AccountHolder {
   private String firstName;
   private String lastName;
 
   public Person(String firstName, String lastName, int idNumber) {
-    // complete this constructor
+    super(idNumber);
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
   public String getFirstName() {
-    // complete this function
-    return null;
+    return firstName;
   }
 
   public String getLastName() {
-    // complete this function
-    return null;
+    return lastName;
   }
 }
